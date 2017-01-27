@@ -1,7 +1,7 @@
 import TitanCore
 
 public let DefaultErrorHandler: (Error) -> (ResponseType) = { err in
-  return Response(500, String(describing: err))
+  return Response(code: 500, body: String(describing: err), headers: [])
 }
 
 extension Titan {
